@@ -1,0 +1,20 @@
+# Ignora a virtualenv (ajuste conforme o nome da sua env)
+venv/
+.venv/
+
+# Ignora arquivos temporários do sistema e do Python
+__pycache__/
+*.py[cod]
+*.log
+*.tmp
+*.bak
+
+# Ignora arquivos de entrada (PDFs, etc.)
+input/*
+
+# Ignora arquivos de saída (Markdowns gerados)
+output/*
+
+# Mas mantém as pastas (caso queira versionar estrutura vazia)
+!input/.keep
+!output/.keep
