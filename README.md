@@ -36,14 +36,15 @@ pip install docling
 
 ## ⚙️ Como Usar
 
-1. Coloque os arquivos `.pdf` que deseja converter dentro do diretório `input_files/`.
-2. Execute o script:
+1. Coloque os arquivos `.pdf` que deseja converter dentro do diretório `input/`.
+2. Builde o Docker:
 
 ```bash
-python converter.py
+docker build -t docling-app .
+docker run -v "$(pwd)/input:/app/input" -v "$(pwd)/output:/app/output"
 ```
 
-3. Os arquivos `.md` serão gerados automaticamente na pasta `output_files/`.
+3. Os arquivos `.md` serão gerados automaticamente na pasta `output/`.
 
 ---
 
@@ -82,4 +83,3 @@ Este projeto está licenciado sob a licença **MIT**.
 
 - IBM e colaboradores do projeto [Docling](https://github.com/docling-project/docling)
 - Comunidade Python
-
